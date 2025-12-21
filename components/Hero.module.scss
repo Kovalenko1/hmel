@@ -116,6 +116,16 @@
   animation: bounce 2s infinite;
 }
 
+@media (max-width: 767px) {
+  .content {
+    padding-bottom: 4.5rem;
+  }
+
+  .scrollHint {
+    bottom: 1rem;
+  }
+}
+
 .scrollHintText {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -139,7 +149,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
 }
 
