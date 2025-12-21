@@ -1,0 +1,33 @@
+﻿@use '../styles/mixins' as mixins;
+
+.footer {
+  background: var(--color-wood-950);
+  color: var(--color-wood-400);
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-wood-900);
+}
+
+.container {
+  @include mixins.container();
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-wood-200);
+  margin-bottom: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.copy {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.legal {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+

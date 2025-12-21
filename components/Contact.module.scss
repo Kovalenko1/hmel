@@ -1,0 +1,233 @@
+﻿@use '../styles/mixins' as mixins;
+
+.contact {
+  position: relative;
+  padding: 5rem 0;
+  background: var(--color-wood-900);
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: radial-gradient(var(--color-wood-400) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.container {
+  @include mixins.container();
+  position: relative;
+  z-index: 1;
+}
+
+.panel {
+  background: var(--color-wood-100);
+  border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(var(--color-black-rgb), 0.4);
+  overflow: hidden;
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .panel {
+    flex-direction: row;
+  }
+}
+
+.info {
+  background: var(--color-wood-800);
+  color: var(--color-wood-100);
+  padding: 3rem;
+  flex: 0 0 41.6667%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoGlow {
+  position: absolute;
+  top: -2.5rem;
+  right: -2.5rem;
+  width: 10rem;
+  height: 10rem;
+  background: rgba(var(--color-accent-rgb), 0.2);
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+.infoTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.infoText {
+  color: var(--color-wood-300);
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.infoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 6px;
+  background: var(--color-wood-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.infoLabel {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-wood-400);
+  margin-bottom: 0.25rem;
+}
+
+.infoLink {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.infoLink:hover {
+  color: var(--color-wood-200);
+}
+
+.infoFooter {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-wood-700);
+}
+
+.brandMark {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-wood-600);
+  opacity: 0.6;
+}
+
+.formSide {
+  padding: 3rem;
+  background: var(--color-wood-50);
+  flex: 1;
+}
+
+.success {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.successIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-wood-900);
+}
+
+.successText {
+  color: var(--color-wood-600);
+}
+
+.successButton {
+  margin-top: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-wood-900);
+  margin: 0;
+}
+
+.formSubtitle {
+  color: var(--color-wood-600);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-wood-700);
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-wood-300);
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.formButton {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.05rem;
+}
+
+.formNote {
+  font-size: 0.7rem;
+  color: var(--color-wood-500);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+

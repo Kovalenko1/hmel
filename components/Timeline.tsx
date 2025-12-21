@@ -1,43 +1,51 @@
-import React from 'react';
+﻿import React from 'react';
 import { TIMELINE_STAGES } from '../constants';
 import { CheckCircle2 } from 'lucide-react';
+import styles from './Timeline.module.scss';
 
 export const Timeline: React.FC = () => {
   return (
-    <section id="stages" className="py-20 bg-wood-900 text-wood-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-wood-100 mb-4">
+    <section id="stages" className={styles.timeline}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>
             Открытие бизнеса за 1 месяц
           </h2>
-          <p className="text-wood-300 text-lg max-w-2xl mx-auto">
+          <p className={styles.subtitle}>
             Мы сопровождаем вас на всех этапах: от идеи до торжественного открытия и первой прибыли.
           </p>
         </div>
 
-        <div className="relative">
+        <div className={styles.track}>
           {/* Vertical Line for Desktop */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-wood-700 -translate-x-1/2"></div>
+          <div className={styles.trackLine}></div>
 
-          <div className="space-y-12 relative z-10">
+          <div className={styles.stageList}>
             {TIMELINE_STAGES.map((stage, index) => {
               const isEven = index % 2 === 0;
               return (
-                <div key={stage.id} className={`flex flex-col lg:flex-row items-center ${isEven ? 'lg:flex-row-reverse' : ''} gap-8 lg:gap-0`}>
+                <div
+                  key={stage.id}
+                  className={`${styles.stageRow} ${isEven ? styles.stageRowReverse : ''}`}
+                >
                   
                   {/* Content Side */}
-                  <div className={`w-full lg:w-1/2 ${isEven ? 'lg:pl-16' : 'lg:pr-16'}`}>
-                    <div className="bg-wood-800 p-8 rounded-sm shadow-xl border border-wood-700 hover:border-wood-500 transition-colors">
-                      <div className="flex justify-between items-start mb-4">
-                        <h3 className="font-serif text-2xl font-bold text-wood-100">{stage.title}</h3>
-                        <span className="bg-accent text-white text-xs font-bold px-2 py-1 rounded">
+                  <div
+                    className={`${styles.stageContent} ${
+                      isEven ? styles.stageContentLeft : styles.stageContentRight
+                    }`}
+                  >
+                    <div className={styles.stageCard}>
+                      <div className={styles.stageHeader}>
+                        <h3 className={styles.stageTitle}>{stage.title}</h3>
+                        <span className={styles.stageDuration}>
                           {stage.duration}
                         </span>
                       </div>
-                      <ul className="space-y-3">
+                      <ul className={styles.itemList}>
                         {stage.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-wood-300 text-sm">
-                            <CheckCircle2 className="shrink-0 text-wood-500 mt-0.5" size={16} />
+                          <li key={i} className={styles.item}>
+                            <CheckCircle2 className={styles.itemIcon} size={16} />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -46,12 +54,12 @@ export const Timeline: React.FC = () => {
                   </div>
 
                   {/* Center Marker */}
-                  <div className="lg:absolute left-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-wood-200 border-4 border-wood-900 z-20 font-serif font-bold text-wood-900 text-xl shadow-lg">
+                  <div className={styles.stageMarker}>
                     {stage.id}
                   </div>
 
                   {/* Empty Side for layout balance */}
-                  <div className="hidden lg:block w-1/2"></div>
+                  <div className={styles.stageSpacer}></div>
                 </div>
               );
             })}
@@ -61,3 +69,4 @@ export const Timeline: React.FC = () => {
     </section>
   );
 };
+

@@ -1,0 +1,11 @@
+﻿@mixin container($max: 1200px, $pad: 1rem, $pad-md: 2rem) {
+  width: 100%;
+  max-width: $max;
+  margin: 0 auto;
+  padding: 0 $pad;
+
+  @media (min-width: 768px) {
+    padding: 0 $pad-md;
+  }
+}
+

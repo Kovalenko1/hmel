@@ -1,0 +1,72 @@
+﻿:root {
+  --color-wood-50: #fbf7f1;
+  --color-wood-100: #f4ebd0;
+  --color-wood-200: #eaddad;
+  --color-wood-300: #dec383;
+  --color-wood-400: #d3a656;
+  --color-wood-500: #cb8b38;
+  --color-wood-600: #af6d2d;
+  --color-wood-700: #8c5126;
+  --color-wood-800: #734125;
+  --color-wood-900: #5e3622;
+  --color-wood-950: #341b10;
+  --color-accent: #c2410c;
+  --color-accent-hover: #9a3412;
+  --color-accent-rgb: 194, 65, 12;
+  --color-white: var(--color-white)fff;
+  --color-white-rgb: 255, 255, 255;
+  --color-black: #000000;
+  --color-black-rgb: 0, 0, 0;
+  --color-success-bg: #dcfce7;
+  --color-success-text: #16a34a;
+  --color-wood-50-rgb: 251, 247, 241;
+  --color-wood-100-rgb: 244, 235, 208;
+  --color-wood-200-rgb: 234, 221, 173;
+  --color-wood-300-rgb: 222, 195, 131;
+  --color-wood-400-rgb: 211, 166, 86;
+  --color-wood-500-rgb: 203, 139, 56;
+  --color-wood-700-rgb: 140, 81, 38;
+  --color-wood-800-rgb: 115, 65, 37;
+  --color-wood-900-rgb: 94, 54, 34;
+  --color-wood-950-rgb: 52, 27, 16;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-sans);
+  background: var(--color-wood-50);
+  color: var(--color-wood-900);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+

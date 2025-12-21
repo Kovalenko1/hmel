@@ -6,11 +6,12 @@ import { Timeline } from './components/Timeline';
 import { Formats } from './components/Formats';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import styles from './App.module.scss';
 
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen font-sans text-wood-900 bg-wood-50">
+    <div className={styles.app}>
       <Header />
       <main>
         <Hero />
