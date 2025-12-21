@@ -11,9 +11,9 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="imgs/img143.jpg" 
+          src="imgs/хмельяр лого.svg" 
           alt="Atmospheric Brewery" 
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-wood-950/80 via-wood-900/60 to-wood-900/90" />
       </div>

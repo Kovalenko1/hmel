@@ -33,8 +33,11 @@ export const Header: React.FC = () => {
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
            {/* Stylized Text Logo */}
            <div className="flex flex-col items-start">
-             <span className="font-serif text-2xl md:text-3xl font-bold tracking-widest text-wood-200">ХМЕЛЬЯРЪ</span>
-             <span className="text-[0.6rem] md:text-xs tracking-[0.2em] uppercase text-wood-400">Наследие вкуса</span>
+             <img 
+              src="imgs/хмельяр надпись.svg" 
+              alt="Atmospheric Brewery" 
+              className="w-36 h-12"
+              />
            </div>
         </div>
 
