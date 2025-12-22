@@ -9,10 +9,10 @@ export const Timeline: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Открытие бизнеса за 1 месяц
+            Открытие бизнеса за <b className={styles.number}>1</b> месяц
           </h2>
           <p className={styles.subtitle}>
-            Мы сопровождаем вас на всех этапах: от идеи до торжественного открытия и первой прибыли.
+            Мы сопровождаем вас на всех этапах: помогаем вам зарабатывать, развиваться и укреплять бизнес каждый день.
           </p>
         </div>
 

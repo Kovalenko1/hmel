@@ -24,62 +24,62 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header
-      className={`${styles.header} ${
-        isScrolled ? styles.headerScrolled : styles.headerTransparent
-      }`}
-    >
-      <div className={styles.inner}>
-        {/* Logo */}
-        <div className={styles.logo} onClick={() => scrollToSection('hero')}>
-           {/* Stylized Text Logo */}
-           <div className={styles.logoText}>
-             <img 
-              src="imgs/хмельяр надпись.svg" 
-              alt="Atmospheric Brewery" 
-              className={styles.logoImage}
-              />
-           </div>
+      <header
+        className={`${styles.header} ${
+          isScrolled ? styles.headerScrolled : styles.headerTransparent
+        }`}
+      >
+        <div className={styles.inner}>
+          {/* Logo */}
+          <div className={styles.logo} onClick={() => scrollToSection('hero')}>
+            {/* Stylized Text Logo */}
+            <div className={styles.logoText}>
+              <img 
+                src="imgs/pena.png" 
+                alt="Atmospheric Brewery" 
+                className={ isScrolled ? styles.logoImageScrolled : styles.logoImage}
+                />
+            </div>
+          </div>
+
+          {/* Desktop Nav */}
+          <nav className={styles.nav}>
+            <button onClick={() => scrollToSection('legend')} className={styles.navButton}>Легенда</button>
+            <button onClick={() => scrollToSection('stages')} className={styles.navButton}>Этапы</button>
+            <button onClick={() => scrollToSection('formats')} className={styles.navButton}>Форматы</button>
+            <button onClick={() => scrollToSection('contacts')} className={styles.navButton}>Контакты</button>
+          </nav>
+
+          {/* Contact & Mobile Toggle */}
+          <div className={styles.actions}>
+            <a href={`tel:${CONTACTS.phone.replace(/\s/g, '')}`} className={styles.contactLink}>
+              <Phone size={18} className={styles.phoneIcon} />
+              <span>{CONTACTS.phone}</span>
+            </a>
+            
+            <button 
+              className={styles.menuButton}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
 
-        {/* Desktop Nav */}
-        <nav className={styles.nav}>
-          <button onClick={() => scrollToSection('legend')} className={styles.navButton}>Легенда</button>
-          <button onClick={() => scrollToSection('stages')} className={styles.navButton}>Этапы</button>
-          <button onClick={() => scrollToSection('formats')} className={styles.navButton}>Форматы</button>
-          <button onClick={() => scrollToSection('contacts')} className={styles.navButton}>Контакты</button>
-        </nav>
-
-        {/* Contact & Mobile Toggle */}
-        <div className={styles.actions}>
-          <a href={`tel:${CONTACTS.phone.replace(/\s/g, '')}`} className={styles.contactLink}>
-            <Phone size={18} className={styles.phoneIcon} />
-            <span>{CONTACTS.phone}</span>
-          </a>
-          
-          <button 
-            className={styles.menuButton}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className={styles.mobileMenu}>
-          <button onClick={() => scrollToSection('legend')} className={styles.mobileLink}>Легенда</button>
-          <button onClick={() => scrollToSection('stages')} className={styles.mobileLink}>Этапы</button>
-          <button onClick={() => scrollToSection('formats')} className={styles.mobileLink}>Форматы</button>
-          <button onClick={() => scrollToSection('contacts')} className={styles.mobileLink}>Контакты</button>
-          <a href={`tel:${CONTACTS.phone.replace(/\s/g, '')}`} className={styles.mobileContact}>
-            <Phone size={18} />
-            <span>{CONTACTS.phone}</span>
-          </a>
-        </div>
-      )}
-    </header>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className={styles.mobileMenu}>
+            <button onClick={() => scrollToSection('legend')} className={styles.mobileLink}>Легенда</button>
+            <button onClick={() => scrollToSection('stages')} className={styles.mobileLink}>Этапы</button>
+            <button onClick={() => scrollToSection('formats')} className={styles.mobileLink}>Форматы</button>
+            <button onClick={() => scrollToSection('contacts')} className={styles.mobileLink}>Контакты</button>
+            <a href={`tel:${CONTACTS.phone.replace(/\s/g, '')}`} className={styles.mobileContact}>
+              <Phone size={18} />
+              <span>{CONTACTS.phone}</span>
+            </a>
+          </div>
+        )}
+      </header>
   );
 };
 

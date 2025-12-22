@@ -47,9 +47,9 @@ export const Legend: React.FC = () => {
             <div className={styles.cardIcon}>
               <Wheat size={32} />
             </div>
-            <h3 className={styles.cardTitle}>Наследие вкуса</h3>
+            <h3 className={styles.cardTitle}>Возвращение к истокам</h3>
             <p className={styles.cardText}>
-              Бережно восстановленное по древним рецептам для современного ценителя подлинности.
+              Бренд напитков, возрождающий старорусские традиции культуры питья, каким оно было на Руси из покон веков
             </p>
           </div>
 
@@ -57,9 +57,9 @@ export const Legend: React.FC = () => {
             <div className={styles.cardIcon}>
               <Flame size={32} />
             </div>
-            <h3 className={styles.cardTitle}>Характер</h3>
+            <h3 className={styles.cardTitle}>Наследие вкуса</h3>
             <p className={styles.cardText}>
-              Бренд напитков с характером, где каждая капля наполнена смыслами и природной силой.
+              Память о временах, когда вкус имел смысл, а традиция передавалась из рук в руки, из века в век
             </p>
           </div>
 
@@ -67,9 +67,9 @@ export const Legend: React.FC = () => {
             <div className={styles.cardIcon}>
               <Award size={32} />
             </div>
-            <h3 className={styles.cardTitle}>Качество</h3>
+            <h3 className={styles.cardTitle}>Передача ценностей</h3>
             <p className={styles.cardText}>
-               Только натуральные ингредиенты, проверенные поставщики и строгий контроль на всех этапах.
+               ТМы стремимся сохранить атмосферу, которая связывает поколения и не подвластна времени
             </p>
           </div>
         </div>

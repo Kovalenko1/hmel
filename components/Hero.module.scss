@@ -10,9 +10,7 @@
 }
 
 .background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  margin-left: 10em;
 }
 
 .backgroundImage {
@@ -60,6 +58,8 @@
   backdrop-filter: blur(6px);
 }
 
+
+
 @media (min-width: 768px) {
   .badge {
     font-size: 0.875rem;
@@ -79,11 +79,15 @@
 .subtitle {
   font-family: var(--font-sans);
   font-size: 1.125rem;
-  color: var(--color-wood-200);
+  color: #eaddad;
   max-width: 48rem;
   margin-bottom: 3rem;
   font-weight: 300;
   line-height: 1.8;
+}
+
+.buttonRow {
+  margin-top: 5rem;;
 }
 
 @media (min-width: 768px) {
@@ -112,7 +116,7 @@
 .scrollHint {
   position: absolute;
   bottom: 2rem;
-  color: var(--color-wood-300);
+  color: var(--color-wood-100);
   animation: bounce 2s infinite;
 }
 

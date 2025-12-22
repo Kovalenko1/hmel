@@ -22,17 +22,12 @@ export const Hero: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.badgeWrap}>
            <span className={styles.badge}>
-             Франшиза напитков с характером
+             Франшиза магазина разливных напитков
            </span>
         </div>
-        
         <h1 className={styles.title}>
-          ХМЕЛЬЯРЪ
+          Вкус, что всех объединяет
         </h1>
-        
-        <p className={styles.subtitle}>
-          Каждая капля — это возвращение к истокам, к щедрому хлебосольному столу, наполненному смыслами и природной силой.
-        </p>
 
         <div className={styles.buttonRow}>
           <Button onClick={scrollToContact} className={styles.heroButton}>

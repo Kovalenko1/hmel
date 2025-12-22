@@ -195,6 +195,14 @@
   box-shadow: 0 12px 20px rgba(var(--color-black-rgb), 0.35);
 }
 
+.number {
+  position: relative;
+  top: 0.5rem;
+  font-size: 6.5rem;
+  font-weight: 700;
+  color: gold;
+}
+
 @media (min-width: 1024px) {
   .stageMarker {
     position: absolute;

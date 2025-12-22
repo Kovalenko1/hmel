@@ -32,6 +32,10 @@
   flex-direction: column;
 }
 
+.input{
+  background: #f4ebd0b4;
+}
+
 @media (min-width: 768px) {
   .panel {
     flex-direction: row;
@@ -90,7 +94,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 6px;
-  background: var(--color-wood-700);
+  background: var(--color-wood-50);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,9 +210,9 @@
 .input {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: var(--color-white);
+  background: rgb(255, 255, 255);
   border: 1px solid var(--color-wood-300);
-  border-radius: 4px;
+  border-radius: 10px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
