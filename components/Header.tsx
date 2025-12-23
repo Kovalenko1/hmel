@@ -31,16 +31,7 @@ export const Header: React.FC = () => {
       >
         <div className={styles.inner}>
           {/* Logo */}
-          <div className={styles.logo} onClick={() => scrollToSection('hero')}>
-            {/* Stylized Text Logo */}
-            <div className={styles.logoText}>
-              <img 
-                src="imgs/pena.png" 
-                alt="Atmospheric Brewery" 
-                className={ isScrolled ? styles.logoImageScrolled : styles.logoImage}
-                />
-            </div>
-          </div>
+
 
           {/* Desktop Nav */}
           <nav className={styles.nav}>
