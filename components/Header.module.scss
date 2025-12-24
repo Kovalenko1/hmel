@@ -52,8 +52,6 @@
 }
 
 .logoText {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
 }
 
@@ -63,12 +61,10 @@
 }
 
 .logoImageScrolled {
-  position: absolute;
   top:0;
   z-index: 100;
   align-items: flex-start;
-  width: 12rem;
-  height: 2.9rem;
+  height: 2.5rem;
 }
 
 .nav {

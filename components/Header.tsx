@@ -31,13 +31,9 @@ export const Header: React.FC = () => {
       >
         <div className={styles.inner}>
           {/* Logo */}
-          <div className={`${
-          isScrolled ? styles.logoContainerScrolled : styles.logoContainer
-        }`}>
             <img className={`${styles.Logo} ${
           isScrolled ? styles.logoImageScrolled : styles.logoImage
         }`} src="imgs/хмельяр надпись.svg" alt="" />
-          </div>
 
           {/* Desktop Nav */}
           <nav className={styles.nav}>
