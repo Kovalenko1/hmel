@@ -32,6 +32,20 @@
   color: var(--color-white);
 }
 
+.logoContainer {
+  display: none;
+}
+
+.logoContainerScrolled{
+  position: absolute;
+  background: white;
+  width: 200px;
+  height: 2.7rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .logo {
   
   cursor: pointer;
@@ -54,7 +68,7 @@
   z-index: 100;
   align-items: flex-start;
   width: 12rem;
-  height: 5.5rem;
+  height: 2.9rem;
 }
 
 .nav {
